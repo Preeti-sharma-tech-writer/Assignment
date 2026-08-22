@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkappsflyer_doc_preview=self.webpackChunkappsflyer_doc_preview||[]).push([["8233"],{7769(e){e.exports=JSON.parse('{"metadata":{"permalink":"/Assignment/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

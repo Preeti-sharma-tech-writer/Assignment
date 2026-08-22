@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manually collect consent data | AppsFlyer developer hub</title>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root {
+    --text: #1a1a1a;
+    --text-muted: #6f7787;
+    --border: #e7e9ee;
+    --bg: #ffffff;
+    --bg-subtle: #f7f8fa;
+    --accent: #3568d4;      /* ReadMe-style link/accent blue */
+    --note-bg: #eaf2ff;
+    --note-border: #3568d4;
+    --note-text: #1c3f7a;
+    --code-bg: #f7f8f9;
+    --code-header: #e6e8eb;
+    --code-text: #1a1a1a;
+    --code-header-text: #56606b;
+    --inline-code-bg: #eceaea;
+    --inline-code-text: #1a1a1a;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+    color: #101114;
+  }
+  h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 2.75rem 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: #101114;
+  }
+  h3 { font-size: 1.15rem; font-weight: 700; margin: 2rem 0 0.75rem; color: #101114; }
+  h4 {
+    font-size: 1.00rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.6rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  p { margin: 0 0 1.1rem; color: #33394a; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  code {
+    background: var(--inline-code-bg);
+    color: var(--inline-code-text);
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.87em;
+  }
+
+  /* At a glance */
+  #af__articleDescription {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+  #af__articleDescription p { margin: 0; color: #33394a; }
+
+  /* Note callout — matches ReadMe.io style block */
+    /* Note callout — grey card, blue left rule, underline below title */
+  .callout {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  .callout__title {
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .callout > :last-child { margin-bottom: 0; }
+  .callout p { margin: 0 0 0.6rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout--note {
+    background: var(--bg-subtle);
+    border-left: 4px solid var(--note-border);
+    color: var(--text);
+  }
+  .callout--note .callout__title { color: var(--note-text); border-bottom-color: #d7dbe3; }
+  .callout--note code { background: #e4e7ee; color: var(--note-text); }
+
+  .callout--seealso {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+  }
+  .callout--seealso ul { margin: 0; padding-left: 1.2rem; }
+
+  /* Tables */
+  table.table--hover {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+  }
+  table.table--hover th, table.table--hover td {
+    border: 1px solid var(--border);
+    padding: 0.65rem 0.85rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  table.table--color-header th {
+    background: var(--bg-subtle);
+    font-weight: 700;
+    color: #101114;
+  }
+  table.table--striped tbody tr:nth-child(even) { background: #fbfbfc; }
+  table.table--hover tbody tr:hover { background: var(--bg-subtle); }
+
+  /* Code blocks — ReadMe.io style: dark card with language header bar */
+  .code-card {
+    margin: 0 0 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .code-card__header {
+    background: var(--code-header);
+    color: var(--code-header-text);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+
+/* Syntax highlighting tokens (Prism.js) */
+.token.comment { color: #8a94a3; font-style: italic; }
+.token.keyword { color: #1a56db; }
+.token.string, .token.char { color: #1a7f37; }
+.token.number, .token.boolean { color: #0550ae; }
+.token.function { color: #8250df; }
+.token.class-name { color: #8250df; }
+.token.punctuation { color: #56606b; }
+.token.operator { color: #cf222e; }
+.token.annotation { color: #6f7787; }
+
+    /* Tabs */
+  .tabs { margin: 1rem 0 1.5rem; }
+      .tabs-menu {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.25rem;
+    background: var(--code-header);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 0 0 0;
+  }
+  .tabs-link {
+    cursor: pointer;
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--code-header-text);
+    background: transparent;
+    user-select: none;
+    border-radius: 6px 6px 0 0;
+  }
+  .tabs-link.is-active {
+    color: #1a1a1a;
+    background: var(--code-bg);
+  }
+  
+  .tab { display: block; }
+  .tab.is-hidden { display: none; }
+  .tab .code-card {
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+    margin-top: -1px;
+  }
+  .tab .code-card__header { display: none; }
+
+  ol, ul { padding-left: 1.4rem; color: #33394a; }
+  li { margin-bottom: 0.4rem; }
+  ol[type="a"] { margin-top: 0.4rem; }
+</style>
+</head>
+
+<body>
+<article>
+
+
+  <h1>Manually collect consent data</h1>
+
+  <h2>Overview</h2>
+
+
+  <p>Under the EU <a href="https://dev.appsflyer.com/hc/docs/send-consent-for-dma-compliance" target="_blank" rel="noopener noreferrer">Digital Markets Act (DMA)</a>, the European Commission designates certain large digital platforms as gatekeepers. For gatekeepers such as Google, user consent is required to receive personal data from third-party apps and services that can be used for advertising. If the user doesn't consent, Google must not use the data for that purpose.</p>
+
+  <p>Google requires the relevant consent information from the EU user for each app event received from AppsFlyer. This information tells Google whether it can use the user's data for advertising and personalized advertising. Starting with AppsFlyer SDK v6.13.0, the SDK can obtain this consent data and send it to Google during attribution and retargeting flows.</p>
+
+  <p>If your app uses a Transparency and Consent Framework (TCF) v2.2-compatible CMP, the SDK collects the TCF data automatically and translates it into the relevant consent flags, following Google's translation rules.</p>
+
+  <p>If your app doesn't use a CMP, it must collect the consent data and pass it to the SDK manually.</p>
+
+  <h2>Parameters</h2>
+
+  <p>The GDPR factory method accepts the following Boolean consent values. The non-GDPR factory method doesn't require additional arguments.</p>
+
+  <table class="table--hover table--striped table--color-header">
+    <thead>
+      <tr><th>Name</th><th>Type</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>hasConsentForDataUsage</code></td><td>Boolean</td><td>Indicates whether the user consented to the use of their data for advertising.</td></tr>
+      <tr><td><code>hasConsentForAdsPersonalization</code></td><td>Boolean</td><td>Indicates whether the user consented to the use of their data for personalized advertising.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Usage example</h2>
+
+  <p>The following example shows both cases: when GDPR applies and when it doesn't.</p>
+
+  <div class="tabs tabs--colored-1" id="tabs-top">
+    <div class="tabs-menu">
+      <span class="tabs-link is-active" onclick="showTab(this,'tabs-top',0)">Java</span>
+      <span class="tabs-link" onclick="showTab(this,'tabs-top',1)">Kotlin</span>
+    </div>
+    <div class="tab">
+      <div class="code-card">
+        <div class="code-card__header"><span>Java</span></div>
+<pre class="language-java" translate="no"><code class="language-java">// Case 1: GDPR applies
+boolean hasConsentForDataUsage = true;
+boolean hasConsentForAdsPersonalization = true;
+
+AppsFlyerConsent gdprUserConsent = AppsFlyerConsent.forGDPRUser(
+    hasConsentForDataUsage,
+    hasConsentForAdsPersonalization
+);
+AppsFlyerLib.getInstance().setConsentData(gdprUserConsent);
+
+// Case 2: GDPR doesn't apply
+AppsFlyerConsent nonGdprUser = AppsFlyerConsent.forNonGDPRUser();
+AppsFlyerLib.getInstance().setConsentData(nonGdprUser);</code></pre>
+      </div>
+    </div>
+    <div class="tab is-hidden">
+      <div class="code-card">
+        <div class="code-card__header"><span>Kotlin</span></div>
+<pre class="language-kotlin" translate="no"><code class="language-kotlin">// Case 1: GDPR applies
+val gdprUserConsent = AppsFlyerConsent.forGDPRUser(
+    hasConsentForDataUsage = true,
+    hasConsentForAdsPersonalization = true
+)
+AppsFlyerLib.getInstance().setConsentData(gdprUserConsent)
+
+// Case 2: GDPR doesn't apply
+val nonGdprUser = AppsFlyerConsent.forNonGDPRUser()
+AppsFlyerLib.getInstance().setConsentData(nonGdprUser)</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <h2>Methods</h2>
+
+  <h3>forGDPRUser</h3>
+
+  <h4>Description</h4>
+  <p>Use <code>forGDPRUser()</code> when GDPR applies. The method creates an AppsFlyerConsent object from the user's consent decisions for advertising data usage and personalized advertising.</p>
+
+  <h4>Input arguments</h4>
+  <table class="table--hover table--striped table--color-header">
+    <thead>
+      <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Boolean</td><td><code>hasConsentForDataUsage</code></td><td>Indicates whether the user consented to the use of their data for advertising.</td></tr>
+      <tr><td>Boolean</td><td><code>hasConsentForAdsPersonalization</code></td><td>Indicates whether the user consented to the use of their data for personalized advertising.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Returns</h4>
+  <table class="table--hover table--striped table--color-header">
+    <thead>
+      <tr><th>Type</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>AppsFlyerConsent</code></td><td>An object containing the user's data-usage and ad-personalization consent values. Pass the object to <code>setConsentData()</code>.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Usage example</h4>
+  <p>Set the Boolean values to the user's actual consent decisions.</p>
+
+  <div class="tabs tabs--colored-1" id="tabs-gdpr">
+    <div class="tabs-menu">
+      <span class="tabs-link is-active" onclick="showTab(this,'tabs-gdpr',0)">Java</span>
+      <span class="tabs-link" onclick="showTab(this,'tabs-gdpr',1)">Kotlin</span>
+    </div>
+    <div class="tab">
+      <div class="code-card">
+        <div class="code-card__header"><span>Java</span></div>
+<pre class="language-java" translate="no"><code class="language-java">// Case 1: GDPR applies
+boolean hasConsentForDataUsage = true;
+boolean hasConsentForAdsPersonalization = true;
+
+AppsFlyerConsent gdprUserConsent = AppsFlyerConsent.forGDPRUser(
+    hasConsentForDataUsage,
+    hasConsentForAdsPersonalization
+);
+AppsFlyerLib.getInstance().setConsentData(gdprUserConsent);</code></pre>
+      </div>
+    </div>
+    <div class="tab is-hidden">
+      <div class="code-card">
+        <div class="code-card__header"><span>Kotlin</span></div>
+<pre class="language-kotlin" translate="no"><code class="language-kotlin">// Case 1: GDPR applies
+val gdprUserConsent = AppsFlyerConsent.forGDPRUser(
+    hasConsentForDataUsage = true,
+    hasConsentForAdsPersonalization = true
+)
+AppsFlyerLib.getInstance().setConsentData(gdprUserConsent)</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <h3>forNonGDPRUser</h3>
+
+  <h4>Description</h4>
+  <p>Use <code>forNonGDPRUser()</code> when GDPR doesn't apply. The method creates an AppsFlyerConsent object without additional consent values.</p>
+
+  <h4>Input arguments</h4>
+  <p>None.</p>
+
+  <h4>Returns</h4>
+  <table class="table--hover table--striped table--color-header">
+    <thead>
+      <tr><th>Type</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>AppsFlyerConsent</code></td><td>An object representing a user to whom GDPR doesn't apply. Pass the object to <code>setConsentData()</code>.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Usage example</h4>
+  <p>Create the consent object, and pass it to the SDK.</p>
+
+  <div class="tabs tabs--colored-1" id="tabs-nongdpr">
+    <div class="tabs-menu">
+      <span class="tabs-link is-active" onclick="showTab(this,'tabs-nongdpr',0)">Java</span>
+      <span class="tabs-link" onclick="showTab(this,'tabs-nongdpr',1)">Kotlin</span>
+    </div>
+    <div class="tab">
+      <div class="code-card">
+        <div class="code-card__header"><span>Java</span></div>
+<pre class="language-java" translate="no"><code class="language-java">// Case 2: GDPR doesn't apply
+AppsFlyerConsent nonGdprUser = AppsFlyerConsent.forNonGDPRUser();
+AppsFlyerLib.getInstance().setConsentData(nonGdprUser);</code></pre>
+      </div>
+    </div>
+    <div class="tab is-hidden">
+      <div class="code-card">
+        <div class="code-card__header"><span>Kotlin</span></div>
+<pre class="language-kotlin" translate="no"><code class="language-kotlin">// Case 2: GDPR doesn't apply
+val nonGdprUser = AppsFlyerConsent.forNonGDPRUser()
+AppsFlyerLib.getInstance().setConsentData(nonGdprUser)</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <h2>Implementation</h2>
+
+  <div class="callout callout--note">
+    <h4 class="callout__title">Apps using a CMP</h4>
+    <p>If your app uses a TCF v2.2-compatible CMP, call <code>enableTCFDataCollection(true)</code> after you initialize the SDK. Start the SDK after the CMP indicates that the user made a consent decision. The SDK reads the TCF strings from <code>SharedPreferences</code> and sends the consent data with every server request.</p>
+    <p>The manual steps below are for apps that don't use a compatible CMP.</p>
+  </div>
+
+  <p>The reference sections above describe the consent object and its methods. Complete the setup in the following order:</p>
+
+  <ol>
+    <li>Use AppsFlyer SDK v6.13.0 or later.</li>
+    <li>Initialize the AppsFlyer SDK.</li>
+    <li><a href="https://dev.appsflyer.com/hc/docs/integrate-android-sdk#deferring-sdk-start" target="_blank" rel="noopener noreferrer">Implement a Deferred Start flow</a>.</li>
+    <li>Determine whether GDPR applies to the user.</li>
+    <li>If GDPR applies, call <code>AppsFlyerConsent.forGDPRUser()</code> with both consent values to create the consent object:
+      <ol type="a">
+        <li><code>hasConsentForDataUsage</code></li>
+        <li><code>hasConsentForAdsPersonalization</code></li>
+      </ol>
+    </li>
+    <li>If GDPR doesn't apply, call <code>AppsFlyerConsent.forNonGDPRUser()</code> to create the consent object.</li>
+    <li>Pass the consent object to <code>setConsentData()</code>. Your app must store the relevant consent values and set the consent data in the SDK before every call to <code>start()</code>.</li>
+    <li>Call <code>start()</code>.</li>
+  </ol>
+
+  <div class="callout callout--seealso">
+    <h4 class="callout__title">See also</h4>
+    <ul>
+      <li><a href="https://dev.appsflyer.com/hc/docs/send-consent-for-dma-compliance" target="_blank" rel="noopener noreferrer">Send consent for DMA compliance</a></li>
+    </ul>
+  </div>
+
+</article>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-kotlin.min.js"></script>
+<script>
+  function showTab(el, containerId, index) {
+    var container = document.getElementById(containerId);
+    var links = container.querySelectorAll('.tabs-link');
+    var tabs = container.querySelectorAll('.tab');
+    links.forEach(function (l, i) { l.classList.toggle('is-active', i === index); });
+    tabs.forEach(function (t, i) { t.classList.toggle('is-hidden', i !== index); });
+  }
+  if (window.Prism) { Prism.highlightAll(); }
+</script>
+
+</body>
+</html>

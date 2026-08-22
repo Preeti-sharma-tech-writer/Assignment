@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tarinsash integration update</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .callout {
+      position: relative;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+
+    .callout__title {
+      display: flex;
+      align-items: center;
+      min-height: 22px;
+      margin: 0 0 0.75rem;
+      padding-left: 30px;
+      font-weight: bold;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 22px 22px;
+    }
+
+    .callout--warning {
+      border-left: 4px solid #ef526e;
+    }
+
+    .callout--warning .callout__title {
+      color: #ef526e;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ef526e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E") !important;
+    }
+
+    .callout > :last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="callout callout--warning">
+    <h4 class="callout__title">Warning</h4>
+
+    <p>
+    The <code>access_token</code> issued by Tarinsash is valid for
+    30 days. The advertiser or managing agency must manually refresh
+    the token every 30 days and update it in the General settings
+    section, as required by Tarinsash.
+  </p>
+
+  <p>
+    If the token expires, postbacks to Tarinsash will fail until you enter a new token. There is no workaround.
+  </p>
+
+  <p>
+    <strong>Agency-managed traffic:</strong> If an agency promotes
+    your traffic, the agency must also enter and maintain the token
+    in its integration settings.
+  </p>
+
+  <p>
+    <a
+      href="https://hq1.appsflyer.com/partner-marketplace/partner/tarinsash_int-ad-network"
+      target="_blank"
+    >Review or update the token in AppsFlyer</a>.
+  </p>
+
+  <p>
+    <a
+      href="https://calendar.google.com/calendar/r/eventedit?text=Refresh%20Tarinsash%20access_token&amp;dates=now&amp;details=Set%20the%20first%20reminder%20for%2030%20days%20after%20the%20token%20was%20issued.%20Repeat%20every%2030%20days."
+      target="_blank"
+    >Set a 30-day calendar reminder</a>. Set the first reminder for 30 days after the token
+    was issued, and repeat it every 30 days.
+  </p>
+
+  <p>
+    If you're not sure how to obtain or refresh the token, contact
+    your Tarinsash account manager.
+  </p>
+  </div>
+</body>
+</html>
+

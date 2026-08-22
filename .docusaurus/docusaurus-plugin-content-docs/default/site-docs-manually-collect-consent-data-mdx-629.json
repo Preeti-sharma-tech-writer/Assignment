@@ -1,0 +1,20 @@
+{
+  "id": "manually-collect-consent-data",
+  "title": "Manually collect consent data",
+  "description": "Under the EU Digital Markets Act (DMA), the European Commission designates certain large digital platforms as gatekeepers. For gatekeepers such as Google, user consent is required to receive personal data from third-party apps and services that can be used for advertising. If the user doesn't consent, Google must not use the data for that purpose.",
+  "source": "@site/docs/manually-collect-consent-data.mdx",
+  "sourceDirName": ".",
+  "slug": "/manually-collect-consent-data",
+  "permalink": "/Assignment/docs/manually-collect-consent-data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/manually-collect-consent-data.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/Assignment/docs/tutorial-extras/translate-your-site"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "/Assignment/blog-5bb": {
+    "__comp": "a6aa9e1f",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "804b58ce"
+      },
+      {
+        "content": "f4f34a3a"
+      },
+      {
+        "content": "15df8608"
+      },
+      {
+        "content": "1f4725da"
+      }
+    ],
+    "__props": "ee880f2a"
+  },
+  "/Assignment/blog/archive-34b": {
+    "__comp": "9e4087bc",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "__props": "6f369009"
+  },
+  "/Assignment/blog/authors-d41": {
+    "__comp": "621db11d",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "__props": "8977028e"
+  },
+  "/Assignment/blog/authors/all-sebastien-lorber-articles-0d0": {
+    "__comp": "33fc5bb8",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "items": [
+      {
+        "content": "804b58ce"
+      },
+      {
+        "content": "f4f34a3a"
+      },
+      {
+        "content": "1f4725da"
+      }
+    ],
+    "sidebar": "814f3328",
+    "__props": "39efc385"
+  },
+  "/Assignment/blog/authors/yangshun-756": {
+    "__comp": "33fc5bb8",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "items": [
+      {
+        "content": "804b58ce"
+      },
+      {
+        "content": "15df8608"
+      },
+      {
+        "content": "1f4725da"
+      }
+    ],
+    "sidebar": "814f3328",
+    "__props": "7e818672"
+  },
+  "/Assignment/blog/first-blog-post-158": {
+    "__comp": "ccc49370",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "content": "fefdd57e"
+  },
+  "/Assignment/blog/long-blog-post-361": {
+    "__comp": "ccc49370",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "content": "d669559b"
+  },
+  "/Assignment/blog/mdx-blog-post-3b8": {
+    "__comp": "ccc49370",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "content": "59362658"
+  },
+  "/Assignment/blog/tags-2ff": {
+    "__comp": "01a85c17",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "__props": "c990de46"
+  },
+  "/Assignment/blog/tags/docusaurus-5c6": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "804b58ce"
+      },
+      {
+        "content": "f4f34a3a"
+      },
+      {
+        "content": "15df8608"
+      },
+      {
+        "content": "1f4725da"
+      }
+    ],
+    "__props": "4273cd53"
+  },
+  "/Assignment/blog/tags/facebook-e0e": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "804b58ce"
+      }
+    ],
+    "__props": "5d3bbbf9"
+  },
+  "/Assignment/blog/tags/hello-dfc": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "804b58ce"
+      },
+      {
+        "content": "15df8608"
+      }
+    ],
+    "__props": "b7bd470e"
+  },
+  "/Assignment/blog/tags/hola-27b": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "1f4725da"
+      }
+    ],
+    "__props": "04dcd4ab"
+  },
+  "/Assignment/blog/welcome-976": {
+    "__comp": "ccc49370",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "content": "7180d3e2"
+  },
+  "/Assignment/markdown-page-934": {
+    "__comp": "1f391b9e",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "content": "4c678320"
+  },
+  "/Assignment/docs-10c": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "aba21aa0"
+    }
+  },
+  "/Assignment/docs-e2b": {
+    "__comp": "a7bd4aaa",
+    "__props": "467c1664"
+  },
+  "/Assignment/docs-213": {
+    "__comp": "a94703ab"
+  },
+  "/Assignment/docs/category/tutorial---basics-3b6": {
+    "__comp": "14eb3368",
+    "__props": "80bc9613"
+  },
+  "/Assignment/docs/category/tutorial---extras-173": {
+    "__comp": "14eb3368",
+    "__props": "9f05fffd"
+  },
+  "/Assignment/docs/intro-574": {
+    "__comp": "17896441",
+    "content": "f8409a7e"
+  },
+  "/Assignment/docs/manually-collect-consent-data-650": {
+    "__comp": "17896441",
+    "content": "629c699b"
+  },
+  "/Assignment/docs/tutorial-basics/congratulations-243": {
+    "__comp": "17896441",
+    "content": "d2046142"
+  },
+  "/Assignment/docs/tutorial-basics/create-a-blog-post-ce6": {
+    "__comp": "17896441",
+    "content": "bcf87191"
+  },
+  "/Assignment/docs/tutorial-basics/create-a-document-a05": {
+    "__comp": "17896441",
+    "content": "c88346e3"
+  },
+  "/Assignment/docs/tutorial-basics/create-a-page-29d": {
+    "__comp": "17896441",
+    "content": "41f7977f"
+  },
+  "/Assignment/docs/tutorial-basics/deploy-your-site-6f0": {
+    "__comp": "17896441",
+    "content": "8b48892d"
+  },
+  "/Assignment/docs/tutorial-basics/markdown-features-fa1": {
+    "__comp": "17896441",
+    "content": "18c41134"
+  },
+  "/Assignment/docs/tutorial-extras/manage-docs-versions-551": {
+    "__comp": "17896441",
+    "content": "af321b0b"
+  },
+  "/Assignment/docs/tutorial-extras/translate-your-site-2c9": {
+    "__comp": "17896441",
+    "content": "25aee49d"
+  },
+  "/Assignment/-ff5": {
+    "__comp": "c4f5d8e4",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "config": "5e9f5e1a"
+  }
+}
