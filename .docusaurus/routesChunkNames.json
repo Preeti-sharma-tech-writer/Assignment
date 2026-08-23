@@ -1,277 +1,320 @@
 {
-  "/Assignment/blog-5bb": {
-    "__comp": "a6aa9e1f",
+  "/Assignment/__docusaurus/debug-756": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
+    }
+  },
+  "/Assignment/__docusaurus/debug/config-e3e": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
+    }
+  },
+  "/Assignment/__docusaurus/debug/content-baf": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
     },
-    "sidebar": "814f3328",
+    "__props": "__props---assignment-docusaurus-debug-contenta-1-e-05d"
+  },
+  "/Assignment/__docusaurus/debug/globalData-d66": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
+    }
+  },
+  "/Assignment/__docusaurus/debug/metadata-611": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
+    }
+  },
+  "/Assignment/__docusaurus/debug/registry-69f": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
+    }
+  },
+  "/Assignment/__docusaurus/debug/routes-cfb": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---assignment-docusaurus-debugb-38-944"
+    }
+  },
+  "/Assignment/blog-5bb": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---assignment-blog-369-8a1"
+    },
+    "sidebar": "sidebar---assignment-blog-814-f96",
     "items": [
       {
-        "content": "804b58ce"
+        "content": "content---assignment-blog-804-ed9"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---assignment-blogf-4-f-ba5"
       },
       {
-        "content": "15df8608"
+        "content": "content---assignment-blog-15-d-f67"
       },
       {
-        "content": "1f4725da"
+        "content": "content---assignment-blog-1-f-4-361"
       }
     ],
-    "__props": "ee880f2a"
+    "__props": "__props---assignment-blogee-8-408"
   },
   "/Assignment/blog/archive-34b": {
-    "__comp": "9e4087bc",
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "__props": "6f369009"
+    "__props": "__props---assignment-blog-archive-6-f-3-ff1"
   },
   "/Assignment/blog/authors-d41": {
-    "__comp": "621db11d",
+    "__comp": "__comp---theme-blog-pages-blog-authors-list-page-621-70c",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
-    "__props": "8977028e"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "__props": "__props---assignment-blog-authors-897-ec7"
   },
   "/Assignment/blog/authors/all-sebastien-lorber-articles-0d0": {
-    "__comp": "33fc5bb8",
+    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
     "items": [
       {
-        "content": "804b58ce"
+        "content": "content---assignment-blog-804-ed9"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---assignment-blogf-4-f-ba5"
       },
       {
-        "content": "1f4725da"
+        "content": "content---assignment-blog-1-f-4-361"
       }
     ],
-    "sidebar": "814f3328",
-    "__props": "39efc385"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "__props": "__props---assignment-blog-authors-all-sebastien-lorber-articles-39-e-be5"
   },
   "/Assignment/blog/authors/yangshun-756": {
-    "__comp": "33fc5bb8",
+    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
     "items": [
       {
-        "content": "804b58ce"
+        "content": "content---assignment-blog-804-ed9"
       },
       {
-        "content": "15df8608"
+        "content": "content---assignment-blog-15-d-f67"
       },
       {
-        "content": "1f4725da"
+        "content": "content---assignment-blog-1-f-4-361"
       }
     ],
-    "sidebar": "814f3328",
-    "__props": "7e818672"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "__props": "__props---assignment-blog-authors-yangshun-7-e-8-4f0"
   },
   "/Assignment/blog/first-blog-post-158": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
-    "content": "fefdd57e"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "content": "content---assignment-blog-first-blog-postfef-30a"
   },
   "/Assignment/blog/long-blog-post-361": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
-    "content": "d669559b"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "content": "content---assignment-blog-long-blog-postd-66-f06"
   },
   "/Assignment/blog/mdx-blog-post-3b8": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
-    "content": "59362658"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "content": "content---assignment-blog-mdx-blog-post-593-27c"
   },
   "/Assignment/blog/tags-2ff": {
-    "__comp": "01a85c17",
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
-    "__props": "c990de46"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "__props": "__props---assignment-blog-tagsc-99-966"
   },
   "/Assignment/blog/tags/docusaurus-5c6": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---assignment-blog-814-f96",
     "items": [
       {
-        "content": "804b58ce"
+        "content": "content---assignment-blog-804-ed9"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---assignment-blogf-4-f-ba5"
       },
       {
-        "content": "15df8608"
+        "content": "content---assignment-blog-15-d-f67"
       },
       {
-        "content": "1f4725da"
+        "content": "content---assignment-blog-1-f-4-361"
       }
     ],
-    "__props": "4273cd53"
+    "__props": "__props---assignment-blog-tags-docusaurus-427-b29"
   },
   "/Assignment/blog/tags/facebook-e0e": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---assignment-blog-814-f96",
     "items": [
       {
-        "content": "804b58ce"
+        "content": "content---assignment-blog-804-ed9"
       }
     ],
-    "__props": "5d3bbbf9"
+    "__props": "__props---assignment-blog-tags-facebook-5-d-3-3df"
   },
   "/Assignment/blog/tags/hello-dfc": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---assignment-blog-814-f96",
     "items": [
       {
-        "content": "804b58ce"
+        "content": "content---assignment-blog-804-ed9"
       },
       {
-        "content": "15df8608"
+        "content": "content---assignment-blog-15-d-f67"
       }
     ],
-    "__props": "b7bd470e"
+    "__props": "__props---assignment-blog-tags-hellob-7-b-f77"
   },
   "/Assignment/blog/tags/hola-27b": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---assignment-blog-814-f96",
     "items": [
       {
-        "content": "1f4725da"
+        "content": "content---assignment-blog-1-f-4-361"
       }
     ],
-    "__props": "04dcd4ab"
+    "__props": "__props---assignment-blog-tags-hola-04-d-f8d"
   },
   "/Assignment/blog/welcome-976": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "data": {
-        "blogMetadata": "acecf23e"
+        "blogMetadata": "blogMetadata---assignment-blog-authorsace-daf"
       },
-      "plugin": "36994c47"
+      "plugin": "plugin---assignment-blog-369-8a1"
     },
-    "sidebar": "814f3328",
-    "content": "7180d3e2"
+    "sidebar": "sidebar---assignment-blog-814-f96",
+    "content": "content---assignment-blog-welcome-718-24f"
   },
   "/Assignment/markdown-page-934": {
-    "__comp": "1f391b9e",
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "a7456010"
+      "plugin": "plugin---assignment-markdown-pagea-74-d67"
     },
-    "content": "4c678320"
+    "content": "content---assignment-markdown-page-4-c-6-96f"
   },
   "/Assignment/docs-10c": {
-    "__comp": "5e95c892",
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "aba21aa0"
+      "plugin": "plugin---assignment-docsaba-a52"
     }
   },
   "/Assignment/docs-e2b": {
-    "__comp": "a7bd4aaa",
-    "__props": "467c1664"
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---assignment-docs-467-0ed"
   },
   "/Assignment/docs-213": {
-    "__comp": "a94703ab"
+    "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/Assignment/docs/category/tutorial---basics-3b6": {
-    "__comp": "14eb3368",
-    "__props": "80bc9613"
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "__props": "__props---assignment-docs-category-tutorial-basics-80-b-35f"
   },
   "/Assignment/docs/category/tutorial---extras-173": {
-    "__comp": "14eb3368",
-    "__props": "9f05fffd"
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "__props": "__props---assignment-docs-category-tutorial-extras-9-f-0-d56"
   },
   "/Assignment/docs/intro-574": {
-    "__comp": "17896441",
-    "content": "f8409a7e"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-introf-84-abb"
   },
   "/Assignment/docs/manually-collect-consent-data-650": {
-    "__comp": "17896441",
-    "content": "629c699b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-manually-collect-consent-data-629-dd7"
   },
   "/Assignment/docs/tutorial-basics/congratulations-243": {
-    "__comp": "17896441",
-    "content": "d2046142"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-basics-congratulationsd-20-b75"
   },
   "/Assignment/docs/tutorial-basics/create-a-blog-post-ce6": {
-    "__comp": "17896441",
-    "content": "bcf87191"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-basics-create-a-blog-postbcf-d7d"
   },
   "/Assignment/docs/tutorial-basics/create-a-document-a05": {
-    "__comp": "17896441",
-    "content": "c88346e3"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-basics-create-a-documentc-88-762"
   },
   "/Assignment/docs/tutorial-basics/create-a-page-29d": {
-    "__comp": "17896441",
-    "content": "41f7977f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-basics-create-a-page-41-f-f46"
   },
   "/Assignment/docs/tutorial-basics/deploy-your-site-6f0": {
-    "__comp": "17896441",
-    "content": "8b48892d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-basics-deploy-your-site-8-b-4-ed4"
   },
   "/Assignment/docs/tutorial-basics/markdown-features-fa1": {
-    "__comp": "17896441",
-    "content": "18c41134"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-basics-markdown-features-18-c-d90"
   },
   "/Assignment/docs/tutorial-extras/manage-docs-versions-551": {
-    "__comp": "17896441",
-    "content": "af321b0b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-extras-manage-docs-versionsaf-3-5ef"
   },
   "/Assignment/docs/tutorial-extras/translate-your-site-2c9": {
-    "__comp": "17896441",
-    "content": "25aee49d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---assignment-docs-tutorial-extras-translate-your-site-25-a-efd"
   },
   "/Assignment/-ff5": {
-    "__comp": "c4f5d8e4",
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
-      "plugin": "a7456010"
+      "plugin": "plugin---assignment-markdown-pagea-74-d67"
     },
-    "config": "5e9f5e1a"
+    "config": "config---assignment-5-e-9-8ce"
   }
 }
